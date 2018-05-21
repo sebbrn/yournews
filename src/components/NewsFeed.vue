@@ -22,7 +22,8 @@
         name: "NewsFeed",
         data() {
             return {
-                posts: []
+                posts: [],
+                errors: []
             }
         },
         // when the component is created
