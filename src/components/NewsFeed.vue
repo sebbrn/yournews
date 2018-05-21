@@ -1,12 +1,13 @@
 <template>
     <div>
-        <ul v-if="posts && posts.length">
-            <li v-for="post of posts">
-                <a :href=post.url><strong>{{post.title}}</strong></a>
-                <p>{{post.description}}</p>
-                <img :src=post.urlToImage>
-            </li>
-        </ul>
+        <div v-if="posts && posts.length">
+            <b-card class="card" v-for="post of posts"
+                    :title=post.title
+                    :img-src=post.urlToImage>
+                <p class="card-text">{{post.description}}</p>
+                <b-button :href=post.url variant="primary">Show me more</b-button>
+            </b-card>
+        </div>
         <ul v-if="errors && errors.length">
             <li v-for="error of errors">
                 {{error.message}}
@@ -20,6 +21,7 @@
 
     export default {
         name: "NewsFeed",
+        components: {},
         data() {
             return {
                 posts: [],
@@ -40,5 +42,7 @@
 </script>
 
 <style scoped>
-
+    .card {
+        margin-bottom: 2rem;
+    }
 </style>
