@@ -1,12 +1,26 @@
 <template>
     <div>
         <div v-if="posts && posts.length">
-            <b-card class="card" v-for="post of posts"
-                    :title=post.title
-                    :img-src=post.urlToImage>
-                <p class="card-text">{{post.description}}</p>
-                <b-button :href=post.url variant="primary">Show me more</b-button>
-            </b-card>
+            <md-card v-for="post of posts" class="card">
+                <md-card-media-cover md-solid>
+                    <md-card-media md-ratio="16:9">
+                        <img :src=post.urlToImage alt="Image">
+                    </md-card-media>
+
+                    <md-card-area>
+                        <md-card-header>
+                            <span class="md-title">{{post.title}}</span>
+                            <span class="md-subhead">{{post.description}}</span>
+                        </md-card-header>
+
+                        <md-card-actions>
+                            <md-button :href=post.url class="md-icon-button">
+                                <md-icon>link</md-icon>
+                            </md-button>
+                        </md-card-actions>
+                    </md-card-area>
+                </md-card-media-cover>
+            </md-card>
         </div>
         <ul v-if="errors && errors.length">
             <li v-for="error of errors">

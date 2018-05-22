@@ -1,8 +1,9 @@
 <template>
-    <div id="app">
-        <b-container>
+    <div>
+        <div id="app">
             <NewsFeed/>
-        </b-container>
+        </div>
+
     </div>
 </template>
 
@@ -12,22 +13,21 @@
     export default {
         name: 'app',
         components: {
-           NewsFeed
+            NewsFeed
         }
     }
 </script>
 
 <style>
     #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        font-family: 'Roboto', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        margin-top: 60px;
-    }
-
-    img {
-        width: 10rem;
+        margin-top: 2rem;
+        width: 70%;
+        position: absolute;
+        left: 15%;
     }
 </style>
