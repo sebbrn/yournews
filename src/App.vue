@@ -1,7 +1,20 @@
 <template>
     <div>
         <div id="app">
-            <NewsFeed/>
+            <nav>
+                <md-toolbar>
+                    <span class="md-title">yournews</span>
+                </md-toolbar>
+            </nav>
+            <main>
+                <div class="content">
+                    <NewsFeed/>
+                </div>
+            </main>
+            <footer>
+
+            </footer>
+
         </div>
 
     </div>
@@ -25,9 +38,29 @@
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        margin-top: 2rem;
-        width: 70%;
-        position: absolute;
-        left: 15%;
+    }
+
+    body {
+        background-color: #e5f4f3;
+    }
+
+    nav {
+        background-color: #009688;
+    }
+
+    @font-face {
+        font-family: Valencia-Script;
+        src: url("assets/fonts/Valencia-Script.otf") format("opentype");
+    }
+
+    .md-toolbar .md-title {
+        color: white;
+        font-size: 48px;
+        line-height: normal;
+        font-family: Valencia-Script, 'Pacifico', Helvetica, Arial, sans-serif;
+    }
+
+    main {
+        padding: 1rem 1rem 0 1rem;
     }
 </style>

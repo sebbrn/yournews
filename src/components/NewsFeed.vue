@@ -1,32 +1,32 @@
 <template>
     <div>
         <div v-if="posts && posts.length">
-            <md-card v-for="post of posts" class="card">
-                <md-card-media-cover md-solid>
-                    <md-card-media md-ratio="16:9">
-                        <img :src=post.urlToImage alt="Image">
-                    </md-card-media>
+            <div class="md-layout md-gutter">
+                <div v-for="post of posts"
+                     class="md-layout-item md-large-size-33 md-medium-size-33 md-small-size-50 md-xsmall-size-100">
 
-                    <md-card-area>
-                        <md-card-header>
-                            <span class="md-title">{{post.title}}</span>
-                            <span class="md-subhead">{{post.description}}</span>
-                        </md-card-header>
+                    <md-card class="card">
+
+                        <md-card-media>
+                            <img crossOrigin="anonymous" :src=post.urlToImage alt="Image">
+                        </md-card-media>
+
+                        <md-card-content>
+                            <strong>{{post.title}}</strong><br>
+                            {{post.description}}
+                        </md-card-content>
 
                         <md-card-actions>
                             <md-button :href=post.url class="md-icon-button">
                                 <md-icon>link</md-icon>
                             </md-button>
                         </md-card-actions>
-                    </md-card-area>
-                </md-card-media-cover>
-            </md-card>
+
+                    </md-card>
+
+                </div>
+            </div>
         </div>
-        <ul v-if="errors && errors.length">
-            <li v-for="error of errors">
-                {{error.message}}
-            </li>
-        </ul>
     </div>
 </template>
 
@@ -38,8 +38,7 @@
         components: {},
         data() {
             return {
-                posts: [],
-                errors: []
+                posts: []
             }
         },
         // when the component is created
@@ -49,7 +48,7 @@
                     this.posts = response.data.articles;
                 })
                 .catch(e => {
-                    this.errors.push(e);
+                    console.log(e);
                 })
         }
     }
@@ -58,5 +57,10 @@
 <style scoped>
     .card {
         margin-bottom: 2rem;
+        background-color: white;
+    }
+
+    .md-icon-button {
+        color: inherit;
     }
 </style>
