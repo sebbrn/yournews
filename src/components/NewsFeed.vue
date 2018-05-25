@@ -63,4 +63,8 @@
     .md-icon-button {
         color: inherit;
     }
+
+    strong {
+        font-size: initial;
+    }
 </style>
