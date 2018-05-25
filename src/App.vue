@@ -41,7 +41,7 @@
     }
 
     body {
-        background-color: #e5f4f3;
+        background-color: #f5f5f4;
     }
 
     nav {
