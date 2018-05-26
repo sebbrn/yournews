@@ -98,6 +98,7 @@
 
     .no-link {
         color: inherit;
+        text-decoration: underline;
     }
 
     #github {
