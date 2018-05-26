@@ -1,5 +1,5 @@
 # yournews
-A webapp built with Vue to keep you up to date with your favourite topics
+A webapp built with Vue.js to keep you up to date with your favourite topics
 
 <p align="center">
 
@@ -7,5 +7,6 @@ A webapp built with Vue to keep you up to date with your favourite topics
 [![Netlify](https://img.shields.io/badge/deployed%20on-Netlify-brightgreen.svg)](https://suspicious-heyrovsky-050263.netlify.com/)
 
 </p>
+
 # Credits
 News powered by NewsAPI.org
