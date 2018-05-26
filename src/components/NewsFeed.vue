@@ -33,9 +33,20 @@
 <script>
     import axios from 'axios';
 
+    function getApiURL(category) {
+        switch (category) {
+            case "SPORTS" :
+                return 'https://newsapi.org/v2/top-headlines?sources=the-sport-bible&apiKey=fe0c5b3aa3864125b9ef31e528b8b2e4';
+            case "TOPNEWS" :
+                return 'https://newsapi.org/v2/top-headlines?sources=the-new-york-times&apiKey=fe0c5b3aa3864125b9ef31e528b8b2e4'
+        }
+    }
+
     export default {
-        name: "NewsFeed",
-        components: {},
+        name: 'NewsFeed',
+        props: {
+            category: String
+        },
         data() {
             return {
                 posts: []
@@ -43,14 +54,19 @@
         },
         // when the component is created
         created() {
-            axios.get('https://newsapi.org/v2/top-headlines?sources=the-sport-bible&apiKey=fe0c5b3aa3864125b9ef31e528b8b2e4')
+            axios.get(getApiURL(this.category))
                 .then(response => {
                     this.posts = response.data.articles;
                 })
                 .catch(e => {
-                    console.log(e);
+                    console.log({
+                        errorInfo: 'Api Error',
+                        apiURL: getApiURL(this._category),
+                        error: e
+                    });
                 })
         }
+
     }
 </script>
 

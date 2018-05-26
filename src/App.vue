@@ -8,15 +8,17 @@
             </nav>
             <main>
                 <div class="content">
-                    <NewsFeed/>
+                    <md-tabs md-alignment="centered">
+                        <md-tab id="tab-sports" md-label="Sports" md-icon="pool">
+                            <NewsFeed category="SPORTS"></NewsFeed>
+                        </md-tab>
+                        <md-tab id="tab-top-news" md-label="Top News" md-icon="whatshot">
+                            <NewsFeed category="TOPNEWS"></NewsFeed>
+                        </md-tab>
+                    </md-tabs>
                 </div>
             </main>
-            <footer>
-
-            </footer>
-
         </div>
-
     </div>
 </template>
 
@@ -29,6 +31,8 @@
             NewsFeed
         }
     }
+
+    let Category = Category;
 </script>
 
 <style>
@@ -62,5 +66,9 @@
 
     main {
         padding: 1rem 1rem 0 1rem;
+    }
+
+    .md-tab {
+
     }
 </style>
