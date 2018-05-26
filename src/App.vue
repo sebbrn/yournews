@@ -18,6 +18,14 @@
                     </md-tabs>
                 </div>
             </main>
+            <footer>
+                <div class="md-vertical md-alignment-center">
+                    Made with <img class="inline-img" src="./assets/vue_logo.png"> by <a class="no-link" href="https://www.github.com/sebbrn">Sebastian Brune</a><br>
+                    <a class="no-link" href="https://www.github.com/sebbrn/yournews"><img class="inline-img" src="./assets/GitHub-Mark-64px.png"> View on GitHub</a><br>
+
+                    News powered by <a class="no-link" href="https://newsapi.org/">NewsAPI.org</a>
+                </div>
+            </footer>
         </div>
     </div>
 </template>
@@ -65,10 +73,23 @@
     }
 
     main {
-        padding: 1rem 1rem 0 1rem;
+        padding: 1rem 1rem 7rem 1rem;
     }
 
-    .md-tab {
+    footer {
+        background-color: lightgrey;
+        padding: 2rem;
+        color: dimgrey;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
 
+    .inline-img {
+        height: 1rem !important;
+    }
+
+    .no-link {
+        color: inherit;
     }
 </style>
