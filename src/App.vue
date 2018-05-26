@@ -20,9 +20,14 @@
             </main>
             <footer>
                 <div class="md-vertical md-alignment-center">
-                    Made with <img class="inline-img" src="./assets/vue_logo.png"> by <a class="no-link" href="https://www.github.com/sebbrn">Sebastian Brune</a><br>
-                    <a class="no-link" href="https://www.github.com/sebbrn/yournews"><img class="inline-img" src="./assets/GitHub-Mark-64px.png"> View on GitHub</a><br>
-
+                    <!-- personal github page -->
+                    Made with <img class="inline-img" src="./assets/vue_logo.png"> by Sebastian Brune<br>
+                    <!-- github -->
+                    <div id="github">
+                        <a class="github-button" data-size="large" href="https://github.com/sebbrn" aria-label="Github">GitHub</a>
+                        <a class="github-button" data-size="large" data-icon="octicon-star" href="https://github.com/sebbrn/yournews" aria-label="Repository">Repository</a><br>
+                    </div>
+                    <!-- newsapi credit -->
                     News powered by <a class="no-link" href="https://newsapi.org/">NewsAPI.org</a>
                 </div>
             </footer>
@@ -91,5 +96,9 @@
 
     .no-link {
         color: inherit;
+    }
+
+    #github {
+        margin: 5px 0 5px 0;
     }
 </style>

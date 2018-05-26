@@ -8,5 +8,5 @@ A webapp built with Vue.js to keep you up to date with your favourite topics
 
 </p>
 
-# Credits
+## Credits
 News powered by NewsAPI.org
