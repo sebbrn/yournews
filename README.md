@@ -9,5 +9,8 @@ A webapp built with Vue.js and designed with Vue Material to keep you up to date
 
 </p>
 
+## Remarks
+Developed primarily for learning purposes
+
 ## Credits
 News powered by NewsAPI.org
