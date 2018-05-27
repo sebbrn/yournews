@@ -13,4 +13,4 @@ A webapp built with Vue.js and designed with Vue Material to keep you up to date
 Developed primarily for learning purposes
 
 ## Credits
-News powered by NewsAPI.org
+News powered by [NewsAPI.org](https://newsapi.org/)
