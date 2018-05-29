@@ -3,7 +3,7 @@
         <div v-if="posts && posts.length">
             <div class="md-layout md-gutter">
                 <div v-for="post of posts"
-                     class="md-layout-item md-large-size-33 md-medium-size-33 md-small-size-50 md-xsmall-size-100">
+                     class="md-layout-item md-xlarge-size-25 md-large-size-33 md-medium-size-33 md-small-size-50 md-xsmall-size-100">
 
                     <md-card class="card">
 
