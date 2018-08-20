@@ -22,7 +22,7 @@
                 <div class="md-vertical md-alignment-center">
                     <!-- personal github page -->
                     Made with <span><img title="Vue.js" alt="Vue.js" class="inline-img" src="./assets/vue_logo.png"><md-tooltip
-                        md-direction="top" id="vue-tooltip">Vue.js</md-tooltip></span> by <a class="no-link" href="https://sebastian-brune.netlify.com">Sebastian Brune</a><br>
+                        md-direction="top" id="vue-tooltip">Vue.js</md-tooltip></span> by Sebastian Brune<br>
                     <!-- github -->
                     <div id="github">
                         <a class="github-button" data-size="large" href="https://github.com/sebbrn" aria-label="Github">GitHub</a>
